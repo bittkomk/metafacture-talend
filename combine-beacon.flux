@@ -8,5 +8,6 @@ read-beacon(metadatafilter="name|isil")|
 stream-to-triples|
 sort-triples(by="subject")|
 collect-triples|
-encode-formeta(style="multiline")|
-write("stdout");
+morph(basedir + "morph-test.xml")|
+encode-json|
+write("stdout", separator=",\n", header="{\"beaconMappings\":[", footer="]}");

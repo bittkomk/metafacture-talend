@@ -7,20 +7,19 @@
 	<macros>
 	</macros>
 	<rules>
+		<entity name="beaconMapping">
+			<data source="_id" name="id" />
 
-		<data source="_id" name="id" />
+			<entity name="seeAlso[]" flushWith="record">
+				<entity name="" flushWith="seeAlso">
+					<choose name="name" flushWith="seeAlso">
+						<data source="seeAlso.name" />
+						<data source="seeAlso.description" />
+					</choose>
 
-		<entity name="seeAlso[]" flushWith="record">
-			<entity name="" flushWith="seeAlso">
-				<choose name="name" flushWith="seeAlso">
-					<data source="seeAlso.name" />
-					<data source="seeAlso.description" />
-				</choose>
-
-				<data source="seeAlso.url" name="url" />
+					<data source="seeAlso.url" name="url" />
+				</entity>
 			</entity>
 		</entity>
-
-
 	</rules>
 </metamorph>
