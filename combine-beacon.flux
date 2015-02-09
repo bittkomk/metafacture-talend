@@ -10,4 +10,4 @@ sort-triples(by="subject")|
 collect-triples|
 morph(basedir + "morph-test.xml")|
 encode-json|
-write("stdout", separator=",\n", header="{\"beaconMappings\":[", footer="]}");
+write(basedir+"mappedBeacons.JSON", separator=",\n", header="{\"beaconMappings\":[", footer="]}");
