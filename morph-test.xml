@@ -14,10 +14,12 @@
 				<entity name="" flushWith="seeAlso">
 					<choose name="name" flushWith="seeAlso">
 						<data source="seeAlso.name" />
-						<data source="seeAlso.description" />
+						<data source="seeAlso.linkname" />
 					</choose>
 
 					<data source="seeAlso.url" name="url" />
+					<data source="seeAlso.linkname" name="linkname"/>
+					<data source="seeAlso.category" name="category"/>
 				</entity>
 			</entity>
 		</entity>
